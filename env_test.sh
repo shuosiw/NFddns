@@ -2,7 +2,7 @@
 #
 # File: env_test.sh
 # Desc:
-# Date: 2021-04-25
+# Date: 2021-04-26
 
 export NFD_ID='test_id'
 export NFD_TOKEN='test_token'
@@ -15,8 +15,6 @@ export NFD_TTL='600'
 export NFD_PROXY=''
 export NFD_DEBUG=''
 export NFD_CACHE=''
-
-
 
 docker run -e NFD_ID='test_id' -e NFD_TOKEN='test_token' \
     -e NFD_DNS='dnspod' -e NFD_IPV4='ddns.xxx.com,ipv4.ddns.xxx.com' \

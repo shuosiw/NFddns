@@ -2,7 +2,7 @@
 #
 # File: service.sh
 # Desc: ddns service control script
-# Date: 2021-04-25
+# Date: 2021-04-26
 
 # sleep seconds after recieving term signal
 if [ -z "$PRESTOP_SECONDS" ]; then
@@ -15,8 +15,8 @@ DOCKER_STOP=false
 
 VALID_DNS='alidns|cloudflare|dnscom|dnspod|dnspod_com|he|huaweidns|callback'
 VALID_IP_METHOD='default|public|interface:.*|url:.*'
-DDNS_BIN='/root/app/ddns'
-DDNS_CONFIG='/root/app/config.json'
+DDNS_BIN='/ddns'
+DDNS_CONFIG='/config.json'
 JSON_CONFIG_TPL='{
     "id": $NFD_ID,
     "token": $NFD_TOKEN,

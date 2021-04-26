@@ -1,8 +1,6 @@
-FROM alpine:latest
+FROM newfuture/ddns:v2.9.10
 
-COPY ddns_v2.9.10 /root/app/ddns
-COPY service.sh /root/app/
-RUN chmod +x /root/app/service.sh /root/app/ddns && \
-    apk add jq && rm -rf /var/cache/apk/* /tmp/*
+COPY service.sh /service.sh
+RUN chmod +x /service.sh && apk add jq && rm -rf /var/cache/apk/* /tmp/*
 
-CMD ["/root/app/service.sh"]
+CMD ["/service.sh"]
