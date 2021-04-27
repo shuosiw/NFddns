@@ -2,7 +2,7 @@
 #
 # File: service.sh
 # Desc: ddns service control script
-# Date: 2021-04-26
+# Date: 2021-04-27
 
 # sleep seconds after recieving term signal
 if [ -z "$PRESTOP_SECONDS" ]; then
@@ -117,7 +117,7 @@ render_config(){
         --arg NFD_TOKEN "$NFD_TOKEN" \
         --arg NFD_DNS "$NFD_DNS" \
         --argjson NFD_IPV4 "$NFD_IPV4" \
-        --argjson NFD_IPV6 "$NFD_IPV4" \
+        --argjson NFD_IPV6 "$NFD_IPV6" \
         --arg NFD_INDEX4 "$NFD_INDEX4" \
         --arg NFD_INDEX6 "$NFD_INDEX6" \
         --argjson NFD_TTL "$NFD_TTL" \
